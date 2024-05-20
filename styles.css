@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+.service .content {
+    position: relative;
+    width: 100%; /* Adjust based on your layout */
+    height: auto; /* Adjust based on your layout */
+}
+
+.service-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.service-img:first-child {
+    display: block;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.service .content {
+    padding: 10px;
+}
+
+.service img {
+    width:100%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .service {
+        width: 100%;
+    }
+}
+
+/* Style for social links */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a background color for better visibility */
+    padding: 10px 20px; /* Add padding for better spacing */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px; /* Adjust margin for spacing */
+}
+
+.social-links a i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+
+/* Style for service description */
+.service-description {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+.service-description h2 {
+    color: #333;
+}
+
+.service-description p {
+    color: #666;
+}
+
+/* Style for additional info */
+.additional-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.additional-info img {
+    width: 50px; /* Adjust image width as needed */
+    height: 50px; /* Adjust image height as needed */
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin-right: 20px; /* Adjust as needed */
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.dropdown-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-menu li:hover ul {
+    display: block;
+}
+
+.dropdown-menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dropdown-menu li ul li {
+    display: block;
+}
+
+#dropdown-link:hover + #dropdown-menu {
+    display: block;
+}
+
